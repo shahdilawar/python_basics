@@ -1,0 +1,16 @@
+2024-05-29 20:50:20,552 INFO This is a info message
+2024-05-29 20:50:20,553 WARNING This is a warning message
+2024-05-29 20:50:20,553 ERROR Application faced a error situation
+2024-05-29 20:50:20,553 CRITICAL P1 critical error
+2024-05-29 20:50:20,553 INFO function returns : 5
+2024-05-29 20:50:20,553 INFO Function started
+2024-05-29 20:50:43,619 INFO user input is 6 items long
+2024-05-29 20:50:43,619 INFO function returns [1, 2, 3, 4, 5, 6] 
+2024-05-29 20:55:49,421 INFO This is a info message
+2024-05-29 20:55:49,421 WARNING This is a warning message
+2024-05-29 20:55:49,421 ERROR Application faced a error situation
+2024-05-29 20:55:49,421 CRITICAL P1 critical error
+2024-05-29 20:55:49,421 INFO function returns : 5
+2024-05-29 20:55:49,421 INFO Function started
+2024-05-29 20:55:54,820 INFO user input is 5 items long
+2024-05-29 20:55:54,821 INFO function returns [4, 5, 6, 7, 8] 

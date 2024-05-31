@@ -1,0 +1,17 @@
+2024-05-31 08:56:31,351 ERROR Product missing required field : price
+2024-05-31 08:56:31,351 INFO Added product to inventory : Product2
+2024-05-31 08:56:31,351 ERROR Product missing required field : name
+2024-05-31 08:56:31,351 INFO Added product to inventory : Product4
+2024-05-31 08:58:35,999 ERROR Product missing required field : price
+2024-05-31 08:58:35,999 INFO Added product to inventory : Product2
+2024-05-31 08:58:35,999 ERROR Product missing required field : name
+2024-05-31 08:58:35,999 INFO Added product to inventory : Product4
+2024-05-31 08:59:33,661 ERROR File no found at passed over path
+2024-05-31 09:00:38,195 ERROR Product missing required field : price
+2024-05-31 09:00:38,195 INFO Added product to inventory : Product2
+2024-05-31 09:00:38,195 ERROR Product missing required field : name
+2024-05-31 09:00:38,195 INFO Added product to inventory : Product4
+2024-05-31 09:02:20,557 ERROR Product missing required field : price
+2024-05-31 09:02:20,557 INFO Added product to inventory : Product2
+2024-05-31 09:02:20,557 ERROR Product missing required field : name
+2024-05-31 09:02:20,558 INFO Added product to inventory : Product4
