@@ -37,7 +37,9 @@ except Exception as e1:
 '''
 Plotting arrays with MatPlotlib
 '''
+#initializing array
 a = np.array([2, 1, 5, 7, 4, 6, 8, 14, 10, 9, 18, 20, 22])
-
+#plotting the values
 plt.plot(a)
+#use show method to display
 plt.show()
