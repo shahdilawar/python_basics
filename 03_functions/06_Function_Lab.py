@@ -64,7 +64,7 @@ def meat_and_eggs(meat : str, eggs : str = "organic eggs") -> str:
     print("Argumnets : " , meat, eggs)
     return meat + " and " + eggs
 #call the function
-print("Function return is : ", meat_and_eggs("mutton"))
+print("Function return is : ", meat_and_eggs("Mutton"))
 
 #another example with list
 def iterate_over_list(num : list[int]) -> list[int]:
@@ -77,3 +77,43 @@ def iterate_over_list(num : list[int]) -> list[int]:
     return target_list
 #call the function
 print("Function return is : ", iterate_over_list([1, 2, 3, 5]))
+
+def check_prime(num : int) -> bool:
+    
+    list_to_check = [1,2,3,4,5,6,7,8,9]
+    print("lis to check", list_to_check)
+
+    for i in list_to_check:
+           if (num % num == 0 and num % 1 == 0):
+                print(f"num is {num} and i is :{i}")
+                if (i != num):
+                    print(f"num is {num} and i is :{i}")
+                    if(i != 1):
+                        if (num % i == 0):
+                            return False
+    return True
+'''
+Write a function to test prime numbers
+    * Input list populated of numbers from 1 to 100
+    * return a prime number list using list comprehension.
+'''
+def generate_prime_number_list() -> list[int]:
+    # check if numbers are 0, 1, 2
+    numbers_tuple = (0, 1, 2)
+    prime_number_list = [2]
+    stop_range = 101
+    for n in range(3, stop_range, 1):
+
+        print("n is  ", n)
+        flag = check_prime(n)
+        print("flag is : ", flag)
+        if ( flag ):
+            prime_number_list.append(n)
+    #prime_list = [n for n in range (2, 101) if(check_prime(n)) ]
+    return prime_number_list
+
+#call prime
+prime_list = generate_prime_number_list()
+print(f"prime list is : {prime_list}")
+            
+
