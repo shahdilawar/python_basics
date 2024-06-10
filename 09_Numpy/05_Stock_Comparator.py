@@ -1,5 +1,6 @@
 import yfinance as yf
 import matplotlib.pyplot as plt
+import pandas as pd
 
 class StockComparator:
 
@@ -14,15 +15,20 @@ class StockComparator:
         #download from yahoo finance
         self.data = yf.download(self.tickers, self.start_date, 
                                 self.end_date)["Adj Close"]
+        
     
     def plot_stock_comparison(self):
         
         #set the canvas
         plt.figure(figsize=(14, 7))
-
+        print(f"Type of data obj : {type(self.data)}")
         #iterate through the downloaded data and plot chart
-        for ticker in self.tickers:
-            plt.plot( self.data[ticker], label=ticker)
+        #If there is only one ticker
+        if (len(self.tickers) == 1):
+            plt.plot( self.data, label=self.tickers[0])
+        else:
+            for ticker in self.tickers:
+                plt.plot( self.data[ticker], label=ticker)
         
         #Define the chart title
         plt.title(f"Stock prices of : {self.tickers} between {self.start_date} and {self.end_date}")
