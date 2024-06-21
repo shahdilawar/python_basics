@@ -1,0 +1,33 @@
+'''
+The intention of this class is to bo an analysis of Stock.
+    * get the ratios
+    * 
+'''
+import yfinance as yf
+import matplotlib.pyplot as plt
+import pandas as pd
+
+class StockAnalysis:
+    #initialize with Stock symbol
+    def __init__(self, stock_symbol : str, period : str) -> None:
+        self.stock_symbol = stock_symbol
+        self.period = period
+        self.stock_data = yf.Ticker(self.stock_symbol)
+        self.stock_data_range = self.period
+        
+    def stock_info(self):
+        self.stock_info = self.stock_data.info
+        print(f"{self.stock_symbol} data is : \n {self.stock_info}")
+
+def test_class_methos():
+
+    #seek stock symbol
+    stock_symbol = input("Please enter stock symbol : ")
+    stock_analysis_period = input("Please enter stock analysis period {1d, 5d, 1mo, 1y, 5y} : ")
+
+    stock_analysis = StockAnalysis(stock_symbol, stock_analysis_period)
+
+    stock_analysis.stock_info()
+
+if __name__ == "__main__":
+    test_class_methos()
