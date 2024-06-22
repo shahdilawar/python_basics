@@ -16,7 +16,16 @@ class StockComparator:
         self.data = yf.download(self.tickers, self.start_date, 
                                 self.end_date)["Adj Close"]
         
-    
+    #Method to write the data to csv
+    def dataframe_data_to_csv(self):
+        file_path = "/Users/kader8/learning/python_basics/09_Numpy/stock_data.csv"
+
+        try:
+            self.data.to_csv(file_path)
+        except Exception as e:
+            print(e)
+   
+    #Method to plot the comparison data
     def plot_stock_comparison(self):
         
         #set the canvas
@@ -62,6 +71,8 @@ def test_classes():
     #Initialize StockComparator object
     stock_comparator = StockComparator(stock_list, start_date, end_date)
 
+    #write to csv
+    stock_comparator.dataframe_data_to_csv()
     #Plot the graph
     stock_comparator.plot_stock_comparison()
 

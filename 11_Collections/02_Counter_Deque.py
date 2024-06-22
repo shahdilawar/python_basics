@@ -25,9 +25,32 @@ def word_count_demo(sentence : str) -> Counter:
 
     return word_counter_obj
 
-#demo of counter as shopping cart
+'''
+* Deque was specially designed to overcome the efficiency problems of 
+    .append() and .pop() in Python list.
+* Append and pop operations on both ends of a deque object are stable 
+    and equally efficient because deques are implemented as a 
+    doubly linked list. 
+* Additionally, append and pop operations on deques are also thread 
+    safe and memory efficient. 
+* Deques are also the way to go if you need to keep a list of 
+    last-seen items because you can restrict the maximum length of 
+    your deques
+'''
+def deque_demo():
+    # Use .append methods for enqueing.
+    customers = deque()
 
+    # people arriving to restaurant    
+    customers.append("Jane")
+    customers.append("Raja")
+    customers.append("Nayak")
 
+    #Customers waiting in queue
+    print(f"Customers waiting in queue : {customers}")
+    # people getting tables
+    for i in range(len(customers)):
+        print(f"Customer getting table is : {customers.popleft()}")
 
 
 def test_classes():
@@ -41,6 +64,9 @@ def test_classes():
     word_counter = word_count_demo(sentence)
     print(f"word counter is {word_counter}")
     print(f"Most common word is : {word_counter.most_common(5)}")
+
+    #Simple Deque demo
+    deque_demo()
 
 
 if __name__ == "__main__":
