@@ -52,6 +52,23 @@ def panda_dataframe_demo():
     except Exception as e:
         print(e)
 
+def read_home_data():
+    #create a data directory one level above code
+    os.makedirs(os.path.join("./python_basics", "data"), exist_ok=True)
+    data_file = os.path.join("./python_basics", "data", "tiny_house.csv")
+    try:
+        with open(data_file, 'w') as f:
+            f.write('''NumRooms,RoofType,Price
+                    NA,NA,127500
+                    2,NA,106000
+                    4,Slate,178100
+                    NA,NA,130000''')
+    except Exception as e:
+        print(e)
+
+    data = pd.read_csv(data_file)
+    print(f"read panda data is : \n {data}")
+
 '''
 Plotting arrays with MatPlotlib
 '''
@@ -81,6 +98,7 @@ def test_methods():
     read_all_data_from_csv()
     read_specific_columns()
     panda_dataframe_demo()
+    read_home_data()
     plot_1D_array()
     plot_timeseries_data()
 
